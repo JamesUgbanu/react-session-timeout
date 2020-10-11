@@ -6,6 +6,7 @@ import {
   makeStyles
 } from '@material-ui/core';
 import logo from './logo.svg'
+import SessionTimeout from './SessionTimeout';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,7 +59,6 @@ const App = () => {
 
     const handleClick = () => {
       setAuth(!isAuthenticated);
-      console.log('hi')
     }
   
     if (isAuthenticated) {
@@ -73,6 +73,7 @@ const App = () => {
         className={classes.cardContainer}
         maxWidth="sm"
       >
+        <SessionTimeout isAuthenticated={isAuthenticated} logOut={handleClick} />
         <Box
           mb={4}
           display="flex"
