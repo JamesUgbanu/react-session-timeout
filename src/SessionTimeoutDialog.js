@@ -43,12 +43,10 @@ const SessionTimeoutDialog = ({  open, countdown, onLogout,onContinue }) => {
   return (
     <Dialog
       open={open}
-      aria-labelledby="session-timeout-dialog"
-      aria-describedby="session-timeout-dialog"
       classes={{ paper: classes.dialog }}
       TransitionComponent={Transition}
     >
-      <DialogTitle id="session-timeout-dialog-title">
+      <DialogTitle>
         Session Timeout
       </DialogTitle>
       <DialogContent>
